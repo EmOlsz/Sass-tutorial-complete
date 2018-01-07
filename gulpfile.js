@@ -1,8 +1,12 @@
-import gulp from 'gulp';
-import sass from 'gulp-sass';
+const gulp = require('gulp');
+const sass = require('gulp-sass');
 
-gulp.task('sass', function(){
+gulp.task('sass', () => {
     return gulp.src('./app/sass/main.scss')
-        .pipe(sass())
+        .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('./dist/css'))
+});
+
+gulp.task('watch', () => {
+    gulp.watch('./app/sass/*.scss', ['sass']);
 });
