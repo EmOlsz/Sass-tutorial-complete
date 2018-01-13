@@ -1,0 +1,35 @@
+.header {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__logo {
+    display: inline-block;
+  }
+
+  &__nav {
+
+    &-list {
+      margin: 0;
+    }
+
+    &-element {
+      display: inline-block;
+    }
+
+    &-link {
+      color: $page-font-color;
+      font: italic 500 26px/20px Handlee, Helvetica, sans-serif;
+      cursor: pointer;
+      transition: color .3s;
+      padding: 5px 10px;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $page-font-color-hover;
+      }
+    }
+  }
+}
