@@ -1,0 +1,97 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+
+    &-item {
+      width: 75%;
+      display: block;
+      margin: 0 auto;
+      vertical-align: middle;
+    }
+  }
+
+  &__description {
+
+    &-paragraph {
+      font: 500 20px/28px Lato, Helvetica, sans-serif;
+      color: $page-font-color;
+      text-align: justify;
+    }
+  }
+}
+
+@media screen and (min-width: $sm-min) and (max-width: $sm-max) {
+  .introduction {
+
+    &__image {
+
+      &-item {
+        width: 50%;
+      }
+    }
+
+    &__description {
+
+      &-paragraph {
+        font: 500 20px/28px Lato, Helvetica, sans-serif;
+        color: $page-font-color;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $md-min) and (max-width: $md-max) {
+  .introduction {
+    flex-direction: row;
+
+    &__image {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      &-item {
+        width: 50%;
+      }
+    }
+
+    &__description {
+      width: 50%;
+
+      &-paragraph {
+        font: 500 26px/34px Lato, Helvetica, sans-serif;
+        color: $page-font-color;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $lg-min) {
+  .introduction {
+    flex-direction: row;
+
+    &__image {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      &-item {
+        width: 60%;
+        margin: 0;
+      }
+    }
+
+    &__description {
+      width: 50%;
+
+      &-paragraph {
+        font: 500 26px/34px Lato, Helvetica, sans-serif;
+        color: $page-font-color;
+        text-align: justify;
+      }
+    }
+  }
+}

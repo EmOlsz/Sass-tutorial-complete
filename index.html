@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kurs Sass</title>
-    <link rel="stylesheet" href="dist/css/main.css" />
+    <link rel="stylesheet" href="dist/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Handlee|Lato:300,400,500,600,700,800,900" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <div class="container">
+        <div class="header__container">
             <a class="header__logo">
-                <img src="app/images/sass-logo.png" />
+                <img class="header__logo-item" src="dist/images/sass-logo.png" />
             </a>
             <nav class="header__nav">
                 <ul class="header__nav-list">
@@ -31,22 +31,22 @@
             </nav>
         </div>
     </header>
-    <main class="main-content">
+    <main class="main-content container">
 
         <!-- Introduction section -->
-        <section class="introduction">
+        <section class="introduction block">
             <div class="introduction__image">
-                <img />
+                <img class="introduction__image-item" src="dist/images/sass-logo-big.png" />
             </div>
             <div class="introduction__description">
-                <p class="introduction__description-paragraph"></p>
-                <a class="introduction__description-button introduction__button_pink" href="/"></a>
+                <p class="introduction__description-paragraph">Sass to język skryptowy rozszerzający możliwości czystego CSS'a. Dzięki szerokiej puli funkcjonalności, używany jest to osiągnięcia zaawansowanego, czystego i łatwego w utrzymaniu kodu.</p>
+                <a class="introduction__description-button button" href="http://sass-lang.com" target="_blank">Strona Sass</a>
             </div>
         </section>
 
         <!-- Features section -->
         <section class="features-section">
-            <article class="features features__variables">
+            <article class="features features__variables block">
                 <h1 class="features__heading">Zmienne</h1>
                 <div class="features__description">
                     <p class="features__description-paragraph">
@@ -57,7 +57,7 @@
                     </p>
                 </div>
             </article>
-            <article class="features features__nesting">
+            <article class="features features__nesting block">
                 <h1 class="features__heading">Zagnieżdżanie</h1>
                 <div class="features__description">
                     <p class="features__description-paragraph">
@@ -68,7 +68,7 @@
                     </p>
                 </div>
             </article>
-            <article class="features features__partials">
+            <article class="features features__partials block">
                 <h1 class="features__heading">Struktura</h1>
                 <div class="features__description">
                     <p class="features__paragraph">
@@ -79,7 +79,7 @@
                     </p>
                 </div>
             </article>
-            <article class="features features__mixins">
+            <article class="features features__mixins block">
                 <h1 class="features__heading">Mixiny, extend</h1>
                 <div class="features__description">
                     <p class="features__paragraph">
@@ -90,7 +90,7 @@
                     </p>
                 </div>
             </article>
-            <article class="features features__operators">
+            <article class="features features__operators block">
                 <h1 class="features__heading">Operatory matematyczne</h1>
                 <div class="features__description">
                     <p class="features__paragraph">
@@ -101,7 +101,7 @@
                     </p>
                 </div>
             </article>
-            <article class="features features__functions">
+            <article class="features features__functions block">
                 <h1 class="features__heading">Listy, mapy i logika</h1>
                 <div class="features__description">
                     <p class="features__paragraph">
@@ -115,7 +115,7 @@
         </section>
 
         <!-- Advantages section -->
-        <section class="advantages">
+        <section class="advantages block">
             <h1 class="advantages__heading">Zalety :</h1>
             <ul class="advantages__list">
                 <li class="advantages__element"></li>
@@ -128,7 +128,7 @@
         </section>
 
         <!-- Disadvantages section -->
-        <section class="disadvantages">
+        <section class="disadvantages block">
             <h1 class="disadvantages__heading">Wady :</h1>
             <ul class="disadvantages__list">
                 <li class="disadvantages__element"></li>

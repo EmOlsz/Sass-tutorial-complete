@@ -1,0 +1,21 @@
+.main-content {
+  padding-top: 75px;
+}
+
+@media screen and (min-width: $sm-min) and (max-width: $sm-max) {
+  .main-content {
+    padding-top: 75px;
+  }
+}
+
+@media screen and (min-width: $md-min) and (max-width: $md-max) {
+  .main-content {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (min-width: $lg-min) {
+  .main-content {
+    padding-top: 100px;
+  }
+}
