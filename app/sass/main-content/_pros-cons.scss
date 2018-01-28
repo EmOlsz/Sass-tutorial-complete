@@ -1,0 +1,84 @@
+.pros-cons {
+  position: relative;
+
+  &-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__background-container {
+    height: 330px;
+    filter: blur(15px);
+  }
+
+  &__description {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &-heading {
+      text-align: center;
+      font: italic 900 41px/40px $secondary-font;
+      color: $main-color-dark;
+    }
+
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-element {
+      text-align: center;
+      font: normal 500 20px/28px $main-font;
+      color: $main-color-dark;
+    }
+  }
+}
+
+.pros {
+  &__background-container {
+    background: url('../images/pros.png') center/contain no-repeat;
+    animation: rotateBackground 5s linear infinite;
+  }
+}
+
+.cons {
+  &__background-container {
+    background: url('../images/cons.png') center/contain no-repeat;
+    animation: rotateBackgroundReverse 5s linear infinite;
+  }
+}
+
+@media screen and (min-width: $lg-min) {
+  .pros-cons {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__background-container {
+      height: 80%;
+      flex: 1;
+    }
+
+    &__description {
+      position: static;
+      flex: 1;
+
+      &-heading {
+        font: italic 900 90px/90px "Dynalight",Helvetica,sans-serif;
+        margin: 15px;
+      }
+
+      &-element {
+        font: normal 500 30px/45px Lato,Helvetica,sans-serif;
+      }
+    }
+
+    &:nth-of-type(2n + 2) {
+      flex-direction: row-reverse;
+    }
+  }
+}

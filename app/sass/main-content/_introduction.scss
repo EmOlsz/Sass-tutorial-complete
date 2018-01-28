@@ -15,8 +15,8 @@
   &__description {
 
     &-paragraph {
-      font: 500 20px/28px Lato, Helvetica, sans-serif;
-      color: $page-font-color;
+      font: 500 20px/28px $main-font;
+      color: $main-color-dark;
       text-align: justify;
     }
   }
@@ -35,8 +35,8 @@
     &__description {
 
       &-paragraph {
-        font: 500 20px/28px Lato, Helvetica, sans-serif;
-        color: $page-font-color;
+        font: 500 20px/28px $main-font;
+        color: $main-color-dark;
         text-align: justify;
       }
     }
@@ -61,8 +61,8 @@
       width: 50%;
 
       &-paragraph {
-        font: 500 26px/34px Lato, Helvetica, sans-serif;
-        color: $page-font-color;
+        font: 500 26px/34px $main-font;
+        color: $main-color-dark;
         text-align: justify;
       }
     }
@@ -88,8 +88,8 @@
       width: 50%;
 
       &-paragraph {
-        font: 500 26px/34px Lato, Helvetica, sans-serif;
-        color: $page-font-color;
+        font: 500 26px/34px $main-font;
+        color: $main-color-dark;
         text-align: justify;
       }
     }

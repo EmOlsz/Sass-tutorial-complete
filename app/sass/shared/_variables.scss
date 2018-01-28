@@ -6,15 +6,14 @@ $md-min: 992px;
 $md-max: 1199px;
 $lg-min: 1200px;
 
+// Fonts :
+
+$main-font: Lato, Helvetica, sans-serif;
+$secondary-font: "Dynalight", Helvetica, sans-serif;
+
 // Colors :
 
-$header-font-color: #666;
-$header-font-color-hover: #cc6699;
-
-$button-font-color: #fafafa;
-$button-background: #cc6699;
-$button-border: #cc6699;
-$button-font-color-hover: #cc6699;
-$button-background-hover: #fafafa;
-
-$page-font-color: #333;
+$main-color-dark: #999;
+$main-color-light: #fafafa;
+$secondary-color: #c69;
+$background-color: #333;

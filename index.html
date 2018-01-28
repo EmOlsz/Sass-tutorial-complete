@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kurs Sass</title>
     <link rel="stylesheet" href="dist/css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Handlee|Lato:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dynalight|Lato:300,400,500,600,700,800,900" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -71,10 +71,10 @@
             <article class="features features__partials block">
                 <h1 class="features__heading">Struktura</h1>
                 <div class="features__description">
-                    <p class="features__paragraph">
+                    <p class="features__description-paragraph">
                         Rozbijanie projektu na mniejsze, bardziej szczegółowe części odnoszące się do konkretnych funkcjonalności / bloków kodu.
                     </p>
-                    <p class="features__paragraph">
+                    <p class="features__description-paragraph">
                         Pozwalają na logiczne rozdzielenie większej całości oraz łatwe utrzymanie i edycję styli.
                     </p>
                 </div>
@@ -82,10 +82,10 @@
             <article class="features features__mixins block">
                 <h1 class="features__heading">Mixiny, extend</h1>
                 <div class="features__description">
-                    <p class="features__paragraph">
+                    <p class="features__description-paragraph">
                         Wprowadzają koncepcję zapisania deklaracji CSS'a w postaci re-używalnej zmiennej.
                     </p>
-                    <p class="features__paragraph">
+                    <p class="features__description-paragraph">
                         Tak samo jak zmienne, pozwalają na łatwą implementację i edycję powielanych mechanizmów. Mogą przekazywać podane bezpośrednio przy implementacji parametry.
                     </p>
                 </div>
@@ -93,10 +93,10 @@
             <article class="features features__operators block">
                 <h1 class="features__heading">Operatory matematyczne</h1>
                 <div class="features__description">
-                    <p class="features__paragraph">
+                    <p class="features__description-paragraph">
                         Umożliwiają przeprowadzanie działań matematycznych.
                     </p>
-                    <p class="features__paragraph">
+                    <p class="features__description-paragraph">
                         Dzięki operatorom możliwe jest obliczanie wartości na podstawie określonych danych. Zastosowanie ich w połączeniu z mixinami pozwala na zaawansowane operacje.
                     </p>
                 </div>
@@ -104,47 +104,75 @@
             <article class="features features__functions block">
                 <h1 class="features__heading">Listy, mapy i logika</h1>
                 <div class="features__description">
-                    <p class="features__paragraph">
+                    <p class="features__description-paragraph">
                         Przybliża funkcjonalność języków programowania.
                     </p>
-                    <p class="features__paragraph">
+                    <p class="features__description-paragraph">
                         Listy i mapy swoją strukturą i zastosowaniem nawiązują do tablic i obiektów, natomiast logika oddaje charakter instrukcji warunkowych oraz funkcji. Możliwe jest definiowanie nowych, własnych rozwiązań.
                     </p>
                 </div>
             </article>
         </section>
 
-        <!-- Advantages section -->
-        <section class="advantages block">
-            <h1 class="advantages__heading">Zalety :</h1>
-            <ul class="advantages__list">
-                <li class="advantages__element"></li>
-                <li class="advantages__element"></li>
-                <li class="advantages__element"></li>
-                <li class="advantages__element"></li>
-                <li class="advantages__element"></li>
-                <li class="advantages__element"></li>
-            </ul>
-        </section>
-
-        <!-- Disadvantages section -->
-        <section class="disadvantages block">
-            <h1 class="disadvantages__heading">Wady :</h1>
-            <ul class="disadvantages__list">
-                <li class="disadvantages__element"></li>
-                <li class="disadvantages__element"></li>
-                <li class="disadvantages__element"></li>
-                <li class="disadvantages__element"></li>
-                <li class="disadvantages__element"></li>
-                <li class="disadvantages__element"></li>
-            </ul>
+        <!-- Pros and cons section -->
+        <section class="pros-cons-section">
+            <article class="pros-cons pros block">
+                <div class="pros-cons__background-container pros__background-container"></div>
+                <div class="pros-cons__description">
+                    <h1 class="pros-cons__description-heading">Zalety :</h1>
+                    <ul class="pros-cons__description-list">
+                        <li class="pros-cons__description-element">Jeden</li>
+                        <li class="pros-cons__description-element">Dwa</li>
+                        <li class="pros-cons__description-element">Trzy</li>
+                        <li class="pros-cons__description-element">Cztery</li>
+                        <li class="pros-cons__description-element">Pięć</li>
+                        <li class="pros-cons__description-element">Sześć</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="pros-cons cons block">
+                <div class="pros-cons__background-container cons__background-container"></div>
+                <div class="pros-cons__description">
+                    <h1 class="pros-cons__description-heading">Wady :</h1>
+                    <ul class="pros-cons__description-list">
+                        <li class="pros-cons__description-element">Jeden</li>
+                        <li class="pros-cons__description-element">Dwa</li>
+                        <li class="pros-cons__description-element">Trzy</li>
+                        <li class="pros-cons__description-element">Cztery</li>
+                        <li class="pros-cons__description-element">Pięć</li>
+                        <li class="pros-cons__description-element">Sześć</li>
+                    </ul>
+                </div>
+            </article>
         </section>
     </main>
     <footer class="footer">
-        <aside class="credits">
-            <span>Sass logo author: </span>
-            <a href="https://www.iconfinder.com/Sennerstad">Erik Ragnar Eliasson</a>
-        </aside>
+        <div class="footer__container">
+            <section class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-element">
+                        <a class="footer__nav-link">One</a>
+                    </li>
+                    <li class="footer__nav-element">
+                        <a class="footer__nav-link">Two</a>
+                    </li>
+                    <li class="footer__nav-element">
+                        <a class="footer__nav-link">Three</a>
+                    </li>
+                    <li class="footer__nav-element">
+                        <a class="footer__nav-link">Four</a>
+                    </li>
+                </ul>
+            </section>
+            <aside class="footer__credits">
+                <ul>
+                    <li>
+                        <span>Sass logo author: </span>
+                        <a href="https://www.iconfinder.com/Sennerstad">Erik Ragnar Eliasson</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
     </footer>
 </body>
 </html>

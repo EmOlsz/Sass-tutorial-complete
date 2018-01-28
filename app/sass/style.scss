@@ -3,6 +3,7 @@
 @import "../../node_modules/bootstrap-grid/dist/grid.min.css";
 @import "shared/variables";
 @import "shared/global";
+@import "shared/animations";
 
 // Header
 
@@ -12,3 +13,9 @@
 
 @import "main-content/main-content";
 @import "main-content/introduction";
+@import "main-content/features";
+@import "main-content/pros-cons";
+
+// Footer
+
+@import "footer/footer";

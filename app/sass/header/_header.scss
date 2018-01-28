@@ -2,9 +2,10 @@
   position: fixed;
   right: 0;
   left: 0;
-  box-shadow: 0 0 10px #666;
-  background: rgba(250, 250, 250, .8);
+  box-shadow: 0 0 10px $main-color-dark;
+  background: rgba(20, 20, 20, .5);
   height: 75px;
+  z-index: 10;
 
   &__container {
     width: 100%;
@@ -50,8 +51,8 @@
     }
 
     &-link {
-      color: $header-font-color;
-      font: italic 500 26px/20px Handlee, Helvetica, sans-serif;
+      color: $main-color-dark;
+      font: italic 500 26px/20px $secondary-font;
       cursor: pointer;
       transition: color .3s;
       padding: 5px 10px;
@@ -59,7 +60,7 @@
       &:hover,
       &:focus {
         text-decoration: none;
-        color: $header-font-color-hover;
+        color: $secondary-color;
         outline: none;
       }
     }
