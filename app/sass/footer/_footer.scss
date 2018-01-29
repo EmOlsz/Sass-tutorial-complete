@@ -1,21 +1,21 @@
 .footer {
   background: rgba(20, 20, 20, 0.5);
   box-shadow: 0 0 10px $main-color-dark;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   &__container {
-    width: 100%;
-    height: 100%;
+    margin: 0 15px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
+    flex-direction: column;
     box-sizing: border-box;
   }
 
   &__nav {
+    margin: 15px 0;
+
+    &-list {
+      margin: 0;
+      padding: 0;
+    }
 
     &-element {
       display: inline-block;
@@ -23,10 +23,10 @@
 
     &-link {
       color: $main-color-dark;
-      font: italic 500 26px/20px $secondary-font;
+      font: 500 30px $secondary-font;
       cursor: pointer;
       transition: color .3s;
-      padding: 5px 10px;
+      margin: 5px 20px 5px 0;
 
       &:hover,
       &:focus {
@@ -36,14 +36,64 @@
       }
     }
   }
+
+  &__credits {
+    margin: 15px 0;
+
+    &-heading {
+      margin: 0;
+      color: $main-color-dark;
+      font: 500 30px $secondary-font;
+    }
+
+    &-list {
+      margin: 15px 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &-info {
+      color: $main-color-dark;
+      font: 500 16px $main-font;
+    }
+
+    &-link {
+      color: $secondary-color;
+      font: 500 16px $main-font;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: $sm-min) and (max-width: $sm-max) {
+  .footer {
+
+    &__container {
+      margin: 0 40px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: $md-min) and (max-width: $md-max) {
+  .footer {
+
+    &__container {
+      margin: 0 50px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 }
 
 @media screen and (min-width: $lg-min) {
   .footer {
-    height: 100px;
 
     &__container {
-      padding: 0 50px;
+      margin: 0 50px;
+      flex-direction: row;
+      justify-content: space-between;
     }
 
     &__logo {
@@ -56,13 +106,7 @@
 
     &__nav {
 
-      &-list {
-        padding: 0;
-      }
 
-      &-link {
-        padding: 5px 15px;
-      }
     }
   }
 }

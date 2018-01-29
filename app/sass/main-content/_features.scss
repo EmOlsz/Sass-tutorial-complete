@@ -4,7 +4,7 @@
 
   &__heading {
     text-align: center;
-    font: italic 900 41px/40px $secondary-font;
+    font: 900 41px/40px $secondary-font;
     color: $secondary-color;
   }
 
@@ -13,7 +13,7 @@
 
     &-paragraph {
       text-align: justify;
-      font: normal 500 20px/22px $main-font;
+      font: 500 20px/22px $main-font;
       color: $main-color-dark;
     }
   }
@@ -31,7 +31,7 @@
 
     &__heading {
       flex: 1;
-      font : italic 900 58px/60px "Dynalight",Helvetica,sans-serif
+      font : 900 58px/60px "Dynalight",Helvetica,sans-serif
     }
 
     &__description {
@@ -58,7 +58,7 @@
 
     &__heading {
       flex: 1;
-      font : italic 900 62px/60px "Dynalight",Helvetica,sans-serif
+      font : 900 62px/60px "Dynalight",Helvetica,sans-serif
     }
 
     &__description {

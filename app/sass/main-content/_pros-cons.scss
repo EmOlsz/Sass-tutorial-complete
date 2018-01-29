@@ -8,7 +8,7 @@
 
   &__background-container {
     height: 330px;
-    filter: blur(15px);
+    filter: blur(10px);
   }
 
   &__description {
@@ -53,7 +53,7 @@
 
 @media screen and (min-width: $lg-min) {
   .pros-cons {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
