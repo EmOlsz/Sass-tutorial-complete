@@ -1,0 +1,68 @@
+@mixin button($width, $margin, $font-size, $line-height) {
+  width: $width;
+  display: block;
+  padding: 20px;
+  margin: $margin;
+  border-radius: 25px 0;
+  font: 500 #{$font-size}/#{$line-height} $secondary-font;
+  background: $secondary-color;
+  color: $background-color;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: $lg-min) {
+    transition: all .2s ease-in-out;
+    border: 2px solid $secondary-color;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background: transparent;
+      color: $secondary-color;
+      letter-spacing: 3px;
+      width: 60%;
+      border-radius: 0 40px;
+    }
+  }
+}
+
+//@mixin pros-cons-buttons($class, $start, $end) {
+//  @for $i from $start through $end {
+//    .#{$class}-#{$i} {
+//
+//      @if $i == 0 or $i == 4 {
+//        left: 50px;
+//      }
+//
+//      @if $i < 4 {
+//        left: $i * 225px + 50px;
+//      } @else {
+//        left: ($i - 4) * 225px + 50px;
+//        top: 550px;
+//      }
+//    }
+//  }
+//}
+
+@mixin pros-cons-buttons($class, $start, $end) {
+  @for $i from $start through $end {
+    .#{$class}-#{$i} {
+
+      @if $i == 0 or $i == 4 {
+        left: 50px;
+      }
+
+      @if $i < 4 {
+        left: $i * 225px + 50px;
+      } @else {
+        left: ($i - 4) * 225px + 50px;
+        top: 550px;
+      }
+    }
+  }
+}

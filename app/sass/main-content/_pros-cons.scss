@@ -51,6 +51,74 @@
   }
 }
 
+@media screen and (min-width: $md-min) and (max-width: $md-max) {
+  .pros-cons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 50%;
+
+    &-section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    &__background-container {
+      height: 150px;
+      filter: blur(5px);
+      flex: 1;
+    }
+
+    &__description {
+      position: static;
+      flex: 1;
+
+      &-heading {
+
+      }
+
+      &-list {
+        display: none;
+      }
+    }
+
+    &:nth-of-type(2n + 2) {
+      flex-direction: row-reverse;
+    }
+
+    &-group {
+      height: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      flex: 1 0 100%;
+      margin: 200px 0 50px;
+      border-top: 1px solid $main-color-light;
+
+      &__label {
+        width: 25%;
+      }
+
+      &__input {
+        display: none;
+
+        &:checked + .pros-cons-group__text {
+          @include pros-cons-buttons(pros-cons-group__text, 0, 7);
+         }
+
+      }
+
+      &__text {
+        @include button(150px, 0, 20px, 22px);
+        transition: top .3s ease-in-out;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: $lg-min) {
   .pros-cons {
     height: 80vh;
@@ -72,8 +140,8 @@
         margin: 15px;
       }
 
-      &-element {
-        font: normal 500 30px/45px Lato,Helvetica,sans-serif;
+      &-list {
+        display: none;
       }
     }
 
