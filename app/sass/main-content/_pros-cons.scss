@@ -94,25 +94,26 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      align-items: flex-end;
       flex: 1 0 100%;
       margin: 200px 0 50px;
       border-top: 1px solid $main-color-light;
 
       &__label {
-        width: 25%;
+        width: 33%;
       }
 
       &__input {
         display: none;
 
         &:checked + .pros-cons-group__text {
-          @include pros-cons-buttons(pros-cons-group__text, 0, 7);
+          //@include pros-cons-buttons(pros-cons-group__text, 0, 7);
          }
 
       }
 
       &__text {
-        @include button(150px, 0, 20px, 22px);
+        @include button(150px, 0 auto, 20px, 22px);
         transition: top .3s ease-in-out;
       }
     }

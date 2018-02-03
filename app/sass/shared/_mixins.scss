@@ -49,7 +49,18 @@
 //  }
 //}
 
-@mixin pros-cons-buttons($class, $start, $end) {
+@function buttons-checked($class, $start, $end, $baseX, $baseY) {
+  @for $i from $start through $end {
+    &:checked + .#{$class}-#{$i} {
+      @if $i < 4 {
+        transform: translateY($baseX - $baseX * $i);
+        transform: translateX();
+      }
+    }
+  }
+}
+
+@mixin buttons-checked($class, $start, $end) {
   @for $i from $start through $end {
     .#{$class}-#{$i} {
 
