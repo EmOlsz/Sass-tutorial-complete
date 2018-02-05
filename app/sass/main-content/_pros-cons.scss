@@ -8,7 +8,7 @@
 
   &__background-container {
     height: 330px;
-    filter: blur(10px);
+    filter: blur(15px);
   }
 
   &__heading {
@@ -26,15 +26,22 @@
 
     &-label {
       display: block;
+      text-align: center;
+      padding: 10px 0;
+      font: normal 500 22px/28px $main-font;
+      color: $main-color-dark;
     }
 
     &-input {
       display: none;
     }
 
+    &-counter {
+      font: normal 900 30px/32px $secondary-font;
+    }
+
     &-text {
-      font: normal 500 20px/28px $main-font;
-      color: $main-color-dark;
+      font: normal 500 22px/28px $main-font;
     }
   }
 }
@@ -55,8 +62,8 @@
 
 @media screen and (min-width: $md-min) and (max-width: $md-max) {
   .pros-cons {
-    width: 50%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     flex: 1 0 50%;
@@ -68,18 +75,39 @@
       position: relative;
     }
 
+    &__heading {
+      flex: 1 0 50%;
+      margin: 0;
+    }
+
     &__background-container {
       height: 150px;
       filter: blur(5px);
-      flex: 1;
+      flex: 1 0 50%;
     }
 
     &__description {
       position: static;
-      flex: 1;
+      flex: 1 0 100%;
+      margin: 50px 0;
 
-      &-list {
-        display: none;
+      &-input:checked ~ .pros-cons__description-text {
+        max-width: 100%;
+        max-height: 100%;
+        opacity: 1;
+      }
+
+      &-counter {
+        @include button(20%, 25px auto, 30px, 32px);
+      }
+
+      &-text {
+        display: block;
+        max-width: 0;
+        max-height: 0;
+        opacity: 0;
+        transition: opacity .5s ease, max-width .5s ease, max-height .5s ease;
+        @include button(80%, 25px auto, 30px, 32px);
       }
     }
 
