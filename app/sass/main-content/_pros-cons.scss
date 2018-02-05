@@ -11,26 +11,28 @@
     filter: blur(10px);
   }
 
+  &__heading {
+    text-align: center;
+    font: 900 55px/62px $secondary-font;
+    color: $main-color-dark;
+    margin: 0 0 25px 0;
+  }
+
   &__description {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 40%;
     left: 0;
 
-    &-heading {
-      text-align: center;
-      font: 900 41px/40px $secondary-font;
-      color: $main-color-dark;
+    &-label {
+      display: block;
     }
 
-    &-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    &-input {
+      display: none;
     }
 
-    &-element {
-      text-align: center;
+    &-text {
       font: normal 500 20px/28px $main-font;
       color: $main-color-dark;
     }
@@ -76,10 +78,6 @@
       position: static;
       flex: 1;
 
-      &-heading {
-
-      }
-
       &-list {
         display: none;
       }
@@ -87,35 +85,6 @@
 
     &:nth-of-type(2n + 2) {
       flex-direction: row-reverse;
-    }
-
-    &-group {
-      height: 200px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: flex-end;
-      flex: 1 0 100%;
-      margin: 200px 0 50px;
-      border-top: 1px solid $main-color-light;
-
-      &__label {
-        width: 33%;
-      }
-
-      &__input {
-        display: none;
-
-        &:checked + .pros-cons-group__text {
-          //@include pros-cons-buttons(pros-cons-group__text, 0, 7);
-         }
-
-      }
-
-      &__text {
-        @include button(150px, 0 auto, 20px, 22px);
-        transition: top .3s ease-in-out;
-      }
     }
   }
 }
@@ -132,14 +101,14 @@
       flex: 1;
     }
 
+    &__heading {
+      font: 900 90px/90px "Dynalight",Helvetica,sans-serif;
+      margin: 15px;
+    }
+
     &__description {
       position: static;
       flex: 1;
-
-      &-heading {
-        font: 900 90px/90px "Dynalight",Helvetica,sans-serif;
-        margin: 15px;
-      }
 
       &-list {
         display: none;

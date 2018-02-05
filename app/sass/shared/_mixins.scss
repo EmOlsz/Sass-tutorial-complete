@@ -31,35 +31,6 @@
   }
 }
 
-//@mixin pros-cons-buttons($class, $start, $end) {
-//  @for $i from $start through $end {
-//    .#{$class}-#{$i} {
-//
-//      @if $i == 0 or $i == 4 {
-//        left: 50px;
-//      }
-//
-//      @if $i < 4 {
-//        left: $i * 225px + 50px;
-//      } @else {
-//        left: ($i - 4) * 225px + 50px;
-//        top: 550px;
-//      }
-//    }
-//  }
-//}
-
-@function buttons-checked($class, $start, $end, $baseX, $baseY) {
-  @for $i from $start through $end {
-    &:checked + .#{$class}-#{$i} {
-      @if $i < 4 {
-        transform: translateY($baseX - $baseX * $i);
-        transform: translateX();
-      }
-    }
-  }
-}
-
 @mixin buttons-checked($class, $start, $end) {
   @for $i from $start through $end {
     .#{$class}-#{$i} {
