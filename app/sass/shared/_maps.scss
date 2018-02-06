@@ -1,5 +1,11 @@
 $alignment: (
-  1: left,
+  1: flex-start,
   2: center,
-  3: right
+  3: flex-end
 );
+
+$alignment-reverse: (
+  1: flex-end,
+  2: center,
+  3: flex-start
+)
