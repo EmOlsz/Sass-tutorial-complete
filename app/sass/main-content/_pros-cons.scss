@@ -28,12 +28,18 @@
       display: block;
       text-align: center;
       padding: 10px 0;
-      font: normal 500 22px/28px $main-font;
       color: $main-color-dark;
     }
 
     &-input {
       display: none;
+    }
+
+    &-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: baseline;
     }
 
     &-counter {
@@ -57,6 +63,27 @@
   &__background-container {
     background: url('../images/cons.png') center/contain no-repeat;
     animation: rotateBackgroundReverse 5s linear infinite;
+  }
+}
+
+@media screen and (min-width: $sm-min) and (max-width: $sm-max) {
+  .pros-cons {
+
+    &__description {
+
+      &-group {
+        justify-content: center;
+      }
+
+      &-counter {
+        font: normal 900 40px/42px $secondary-font;
+        padding-right: 15px;
+      }
+
+      &-text {
+        font: normal 500 28px/34px $main-font;
+      }
+    }
   }
 }
 
@@ -91,23 +118,52 @@
       flex: 1 0 100%;
       margin: 50px 0;
 
-      &-input:checked ~ .pros-cons__description-text {
-        max-width: 100%;
-        max-height: 100%;
-        opacity: 1;
+      &-input:checked {
+
+        + .pros-cons__description-group {
+
+          .pros-cons__description-counter {
+            border-radius: 25px 0 0 25px;
+          }
+          .pros-cons__description-text {
+            width: 100%;
+            opacity: 1;
+            border-radius: 0 25px 25px 0;
+          }
+        }
+      }
+
+      &-group {
+        justify-content: center;
+        align-items: center;
       }
 
       &-counter {
-        @include button(20%, 25px auto, 30px, 32px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 75px;
+        color: $background-color;
+        background: $secondary-color;
+        border-radius: 25px;
+        transition: all .5s ease-in-out;
       }
 
       &-text {
-        display: block;
-        max-width: 0;
-        max-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75px;
+        max-width: 300px;
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
         opacity: 0;
-        transition: opacity .5s ease, max-width .5s ease, max-height .5s ease;
-        @include button(80%, 25px auto, 30px, 32px);
+        border-radius: 25px;
+        border: 2px solid $secondary-color;
+        transition: all .5s ease-in-out;
+        box-sizing: border-box;
       }
     }
 

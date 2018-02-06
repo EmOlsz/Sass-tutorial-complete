@@ -3,31 +3,23 @@
   display: block;
   padding: 20px;
   margin: $margin;
-  border-radius: 25px 0;
   font: 500 #{$font-size}/#{$line-height} $secondary-font;
   background: $secondary-color;
   color: $background-color;
   text-align: center;
   text-decoration: none;
+  transition: all .2s ease-in-out;
+  border: 2px solid $secondary-color;
+  @extend .border-radius;
 
   &:hover,
   &:focus {
     text-decoration: none;
-  }
-
-  @media screen and (min-width: $lg-min) {
-    transition: all .2s ease-in-out;
-    border: 2px solid $secondary-color;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      background: transparent;
-      color: $secondary-color;
-      letter-spacing: 3px;
-      width: 60%;
-      border-radius: 0 40px;
-    }
+    background: transparent;
+    color: $secondary-color;
+    letter-spacing: 3px;
+    width: 60%;
+    @extend .border-radius-reversed;
   }
 }
 
