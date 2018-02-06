@@ -10,7 +10,7 @@
   text-decoration: none;
   transition: all .2s ease-in-out;
   border: 2px solid $secondary-color;
-  @extend .border-radius;
+  border-radius: 25px 0;
 
   &:hover,
   &:focus {
@@ -19,24 +19,32 @@
     color: $secondary-color;
     letter-spacing: 3px;
     width: 60%;
-    @extend .border-radius-reversed;
+    border-radius: 0 25px;
   }
 }
 
-@mixin buttons-checked($class, $start, $end) {
+@mixin counter-color($class, $start, $end) {
   @for $i from $start through $end {
-    .#{$class}-#{$i} {
-
-      @if $i == 0 or $i == 4 {
-        left: 50px;
-      }
-
-      @if $i < 4 {
-        left: $i * 225px + 50px;
+    .#{$class}_#{$i} {
+      @if $i == 3 {
+        background: rgba(204, 102, 153, 1/($i+1));
       } @else {
-        left: ($i - 4) * 225px + 50px;
-        top: 550px;
+        background: rgba(204, 102, 153, 1/$i);
       }
     }
+  }
+}
+
+@mixin text-color($class, $numbers) {
+  @each $i in $numbers {
+    .#{$class}_#{$i} {
+      border: 2px solid rgba(204, 102, 153, 1/$i);
+    }
+  }
+}
+
+@function justify($map, $start, $end) {
+  @for $i from $start through $end {
+    @return map-get($map, $i);
   }
 }

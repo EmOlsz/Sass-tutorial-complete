@@ -124,6 +124,7 @@
 
           .pros-cons__description-counter {
             border-radius: 25px 0 0 25px;
+            box-shadow: 0 0;
           }
           .pros-cons__description-text {
             width: 100%;
@@ -145,9 +146,9 @@
         width: 75px;
         height: 75px;
         color: $background-color;
-        background: $secondary-color;
         border-radius: 25px;
         transition: all .5s ease-in-out;
+        box-shadow: 0 0 10px $main-color-light;
       }
 
       &-text {
@@ -165,6 +166,9 @@
         transition: all .5s ease-in-out;
         box-sizing: border-box;
       }
+
+      @include counter-color(pros-cons__description-counter, 1, 3);
+      @include text-color(pros-cons__description-text, $numbers);
     }
 
     &:nth-of-type(2n + 2) {
@@ -175,28 +179,87 @@
 
 @media screen and (min-width: $lg-min) {
   .pros-cons {
-    height: 80vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    flex: 1 0 50%;
 
-    &__background-container {
-      height: 80%;
-      flex: 1;
+    &-section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      position: relative;
     }
 
     &__heading {
-      font: 900 90px/90px "Dynalight",Helvetica,sans-serif;
-      margin: 15px;
+      flex: 1 0 50%;
+      margin: 0;
+    }
+
+    &__background-container {
+      height: 150px;
+      filter: blur(5px);
+      flex: 1 0 50%;
     }
 
     &__description {
       position: static;
-      flex: 1;
+      flex: 1 0 100%;
+      margin: 50px 0;
 
-      &-list {
-        display: none;
+      &-input:checked {
+
+        + .pros-cons__description-group {
+
+          .pros-cons__description-counter {
+            border-radius: 25px 0 0 25px;
+            box-shadow: 0 0;
+          }
+          .pros-cons__description-text {
+            width: 100%;
+            opacity: 1;
+            border-radius: 0 25px 25px 0;
+          }
+        }
       }
+
+      &-group {
+        justify-content: justify($alignment, 3, 1);
+
+        align-items: center;
+      }
+
+      &-counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 75px;
+        color: $background-color;
+        border-radius: 25px;
+        transition: all .5s ease-in-out;
+        box-shadow: 0 0 10px $main-color-light;
+      }
+
+      &-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75px;
+        max-width: 300px;
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        opacity: 0;
+        border-radius: 25px;
+        border: 2px solid $secondary-color;
+        transition: all .5s ease-in-out;
+        box-sizing: border-box;
+      }
+
+      @include counter-color(pros-cons__description-counter, 1, 3);
+      @include text-color(pros-cons__description-text, $numbers);
     }
 
     &:nth-of-type(2n + 2) {
