@@ -42,3 +42,25 @@
     }
   }
 }
+
+@mixin alignment($class, $i, $end) {
+  @while $i < $end {
+    &:nth-of-type(#{$i}) {
+      .#{$class} {
+        justify-content: map-get($alignment, $i);
+      }
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin alignment-reverse($class, $i, $end) {
+  @while $i < $end {
+    &:nth-of-type(#{$i}) {
+      .#{$class} {
+        justify-content: map-get($alignment-reverse, $i);
+      }
+    }
+    $i: $i + 1;
+  }
+}
