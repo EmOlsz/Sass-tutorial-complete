@@ -1,16 +1,16 @@
 @mixin button($width, $margin, $font-size, $line-height) {
   width: $width;
-  display: block;
-  padding: 20px;
   margin: $margin;
   font: 500 #{$font-size}/#{$line-height} $secondary-font;
-  background: $secondary-color;
-  color: $background-color;
+  display: block;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
+  background: $secondary-background;
+  color: $main-color-light;
+  border: 2px solid $secondary-background;
+  border-radius: 30px 0;
   transition: all .2s ease-in-out;
-  border: 2px solid $secondary-color;
-  border-radius: 25px 0;
 
   &:hover,
   &:focus {
@@ -27,8 +27,9 @@
   @for $i from $start through $end {
     .#{$class}_#{$i} {
       @if $i == 3 {
-        background: rgba(204, 102, 153, 1/($i+1));
-      } @else {
+        background: rgba(204, 102, 153, 1/($i + 1));
+      }
+      @else {
         background: rgba(204, 102, 153, 1/$i);
       }
     }

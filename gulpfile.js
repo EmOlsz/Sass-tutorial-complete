@@ -17,7 +17,7 @@ gulp.task('default', ['sass', 'javascript', 'imagemin']);
 gulp.task('sass', () => {
     return gulp.src('./app/sass/style.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass({outputStyle: 'nested'}))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false

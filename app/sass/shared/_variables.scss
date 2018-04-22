@@ -1,19 +1,21 @@
-// Breakpoints :
+// Breakpoints
 
 $sm-min: 768px;
-$sm-max: 991px;
 $md-min: 992px;
-$md-max: 1199px;
 $lg-min: 1200px;
 
-// Fonts :
-
-$main-font: Lato, Helvetica, sans-serif;
-$secondary-font: "Dynalight", Helvetica, sans-serif;
-
-// Colors :
+// Colors
 
 $main-color-dark: #999;
 $main-color-light: #fafafa;
 $secondary-color: #c69;
-$background-color: #333;
+$background-header: rgba(20, 20, 20, .7);
+$background-footer: rgba(20, 20, 20, .7);
+$main-background: #333;
+$secondary-background: #c69;
+$features-background: rgba(204, 102, 153, .005);
+
+// Fonts
+
+$main-font: "Lato", Helvetica, sans-serif;
+$secondary-font: "Dynalight", Helvetica, sans-serif;

@@ -1,0 +1,11 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+}

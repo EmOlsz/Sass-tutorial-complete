@@ -3,99 +3,52 @@
   flex-direction: column;
 
   &__image {
+    width: 100%;
+    display: block;
+    vertical-align: middle;
 
     &-item {
-      width: 75%;
       display: block;
       margin: 0 auto;
-      vertical-align: middle;
+      width: 250px;
     }
   }
 
   &__description {
 
     &-paragraph {
-      font: 500 20px/28px $main-font;
       color: $main-color-dark;
       text-align: justify;
+      font: 500 20px/28px $main-font;
     }
 
     &-button {
-      @include button(50%, 50px auto, 40px, 30px);
+      @include button(50%, 35px auto, 30px, 30px);
     }
   }
 }
 
-@media screen and (min-width: $sm-min) and (max-width: $sm-max) {
-  .introduction {
-
-    &__image {
-
-      &-item {
-        width: 50%;
-      }
-    }
-
-    &__description {
-
-      &-paragraph {
-        font: 500 20px/28px $main-font;
-        color: $main-color-dark;
-        text-align: justify;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: $md-min) and (max-width: $md-max) {
+@media all and (min-width: $md-min) {
   .introduction {
     flex-direction: row;
 
     &__image {
       width: 50%;
-      display: flex;
-      align-items: center;
-
-      &-item {
-        width: 50%;
-      }
     }
 
     &__description {
       width: 50%;
-
-      &-paragraph {
-        font: 500 26px/34px $main-font;
-        color: $main-color-dark;
-        text-align: justify;
-      }
     }
   }
 }
 
-@media screen and (min-width: $lg-min) {
-  .introduction {
-    flex-direction: row;
+.introduction {
 
-    &__image {
-      width: 50%;
-      display: flex;
-      align-items: center;
+  .introduction__description {
 
-      &-item {
-        width: 75%;
-        margin: 0;
-      }
-    }
+  }
 
-    &__description {
-      width: 50%;
+  .introduction__image {
 
-      &-paragraph {
-        font: 500 26px/34px $main-font;
-        color: $main-color-dark;
-        text-align: justify;
-      }
-    }
   }
 }

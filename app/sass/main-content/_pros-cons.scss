@@ -13,7 +13,7 @@
 
   &__heading {
     text-align: center;
-    font: 900 55px/62px $secondary-font;
+    font: 500 55px/62px $secondary-font;
     color: $main-color-dark;
     margin: 0 0 25px 0;
   }
@@ -43,30 +43,32 @@
     }
 
     &-counter {
-      font: normal 900 30px/32px $secondary-font;
+      font: 900 30px/32px $secondary-font;
     }
 
     &-text {
-      font: normal 500 22px/28px $main-font;
+      font: 500 22px/28px $main-font;
     }
   }
 }
 
 .pros {
+
   &__background-container {
-    background: url('../images/pros.png') center/contain no-repeat;
-    animation: rotateBackground 5s linear infinite;
+    background: url("../images/pros.png") center/contain no-repeat;
+    animation: rotate-background 5s linear infinite;
   }
 }
 
 .cons {
+
   &__background-container {
-    background: url('../images/cons.png') center/contain no-repeat;
-    animation: rotateBackgroundReverse 5s linear infinite;
+    background: url("../images/cons.png") center/contain no-repeat;
+    animation: rotate-background-reverse 5s linear infinite;
   }
 }
 
-@media screen and (min-width: $sm-min) and (max-width: $sm-max) {
+@media all and (min-width: $sm-min) {
   .pros-cons {
 
     &__background-container {
@@ -81,24 +83,23 @@
       }
 
       &-counter {
-        font: normal 900 40px/42px $secondary-font;
-        padding-right: 15px;
+        font: 900 40px/42px $secondary-font;
       }
 
       &-text {
-        font: normal 500 28px/34px $main-font;
+        font: 500 28px/34px $main-font;
       }
     }
   }
 }
 
-@media screen and (min-width: $md-min) and (max-width: $md-max) {
+@media all and (min-width: $md-min) {
   .pros-cons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex: 1 0 50%;
+    flex: 1 0 100%;
 
     &-section {
       display: flex;
@@ -113,10 +114,10 @@
     }
 
     &__background-container {
+      flex: 1 0 50%;
       height: 150px;
       width: auto;
       filter: blur(5px);
-      flex: 1 0 50%;
     }
 
     &__description {
@@ -132,6 +133,7 @@
             border-radius: 25px 0 0 25px;
             box-shadow: 0 0;
           }
+
           .pros-cons__description-text {
             width: 100%;
             opacity: 1;
@@ -151,11 +153,11 @@
         justify-content: center;
         width: 75px;
         height: 75px;
-        color: $background-color;
+        color: $main-color-light;
         border-radius: 25px;
-        transition: all .5s ease-in-out;
-        box-shadow: 0 0 10px $main-color-light;
         cursor: pointer;
+        box-shadow: 0 0 10px $main-color-light;
+        transition: all .5s ease-in-out;
       }
 
       &-text {
@@ -163,116 +165,36 @@
         align-items: center;
         justify-content: center;
         height: 75px;
-        max-width: 300px;
+        max-width: 70%;
         width: 0;
         white-space: nowrap;
         overflow: hidden;
         opacity: 0;
         border-radius: 25px;
         border: 2px solid $secondary-color;
-        transition: all .5s ease-in-out;
-        box-sizing: border-box;
         cursor: pointer;
+        box-sizing: border-box;
+        transition: all .5s ease-in-out;
       }
-
       @include counter-color(pros-cons__description-counter, 1, 3);
       @include text-color(pros-cons__description-text, $numbers);
     }
 
-    &:nth-of-type(2n + 2) {
+    &:nth-of-type(2) {
       flex-direction: row-reverse;
     }
   }
 }
 
-@media screen and (min-width: $lg-min) {
+@media all and (min-width: $lg-min) {
   .pros-cons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1 0 50%;
-
-    &-section {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      position: relative;
-    }
-
-    &__heading {
-      flex: 1 0 50%;
-      margin: 0;
-    }
-
-    &__background-container {
-      height: 150px;
-      width: auto;
-      filter: blur(5px);
-      flex: 1 0 50%;
-    }
 
     &__description {
-      position: static;
-      flex: 1 0 100%;
-      margin: 50px 0;
-
-      &-input:checked {
-
-        + .pros-cons__description-group {
-
-          .pros-cons__description-counter {
-            border-radius: 25px 0 0 25px;
-            box-shadow: 0 0;
-          }
-          .pros-cons__description-text {
-            width: 100%;
-            opacity: 1;
-            border-radius: 0 25px 25px 0;
-          }
-        }
-      }
 
       &-group {
+        justify-content: space-evenly;
         align-items: center;
       }
-
-      &-counter {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 75px;
-        height: 75px;
-        color: $background-color;
-        border-radius: 25px;
-        transition: all .5s ease-in-out;
-        box-shadow: 0 0 10px $main-color-light;
-        cursor: pointer;
-      }
-
-      &-text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 75px;
-        max-width: 300px;
-        width: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        opacity: 0;
-        border-radius: 25px;
-        border: 2px solid $secondary-color;
-        transition: all .5s ease-in-out;
-        box-sizing: border-box;
-        cursor: pointer;
-      }
-
-      @include counter-color(pros-cons__description-counter, 1, 3);
-      @include text-color(pros-cons__description-text, $numbers);
-    }
-
-    &:nth-of-type(2n + 2) {
-      flex-direction: row-reverse;
     }
   }
 
@@ -281,6 +203,7 @@
       @include alignment(pros-cons__description-group, 1, 4);
     }
   }
+
 
   .cons {
     .pros-cons__description-label {

@@ -2,16 +2,16 @@
   position: fixed;
   right: 0;
   left: 0;
-  box-shadow: 0 0 10px $main-color-dark;
-  background: rgba(20, 20, 20, .5);
   height: 75px;
   z-index: 10;
+  background: $background-header;
+  box-shadow: 0 0 10px $main-color-dark;
 
   &__container {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 15px;
   }
 
@@ -22,120 +22,15 @@
       vertical-align: middle;
     }
   }
-
-  &__nav {
-    width: 64px;
-    height: 64px;
-    float: right;
-    background: url('../images/menu-open.png');
-
-    &-list {
-      margin: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      padding: 25px;
-      transform: translateX(100%);
-
-      &_opened {
-        transform: translateX(0);
-      }
-    }
-
-    &-element {
-      display: inline-block;
-    }
-
-    &-link {
-      color: $main-color-dark;
-      font: 500 30px $secondary-font;
-      cursor: pointer;
-      transition: color .3s;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-        color: $secondary-color;
-        outline: none;
-      }
-    }
-  }
 }
 
-@media screen and (min-width: $sm-min) and (max-width: $sm-max) {
+@media all and (min-width: $sm-min) {
   .header {
-
-    &__container {
-      margin: 0 40px;
-    }
-  }
-}
-
-@media screen and (min-width: $md-min) and (max-width: $md-max) {
-  .header {
-    height: 100px;
-
-    &__container {
-      margin: 0 50px;
-    }
 
     &__logo {
 
       &-item {
-        width: 64px;
-        vertical-align: middle;
-      }
-    }
-
-    &__nav {
-      background: none;
-      width: auto;
-      height: auto;
-
-      &-list {
-        position: static;
-        transform: none;
-        padding: 0;
-      }
-
-      &-link {
-        padding: 0 15px;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: $lg-min) {
-  .header {
-    height: 100px;
-
-    &__container {
-      margin: 0 50px;
-    }
-
-    &__logo {
-
-      &-item {
-        width: 64px;
-        vertical-align: middle;
-      }
-    }
-
-    &__nav {
-      background: none;
-      width: auto;
-      height: auto;
-
-      &-list {
-        position: static;
-        transform: none;
-        padding: 0;
-      }
-
-      &-link {
-        padding: 0 15px;
+        width: 65px;
       }
     }
   }

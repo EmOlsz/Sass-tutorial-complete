@@ -4,7 +4,7 @@
 
   &__heading {
     text-align: center;
-    font: 900 41px/40px $secondary-font;
+    font: 400 41px/40px $secondary-font;
     color: $secondary-color;
   }
 
@@ -12,52 +12,26 @@
 
     &-paragraph {
       text-align: justify;
-      font: 500 20px/22px $main-font;
       color: $main-color-dark;
+      font: 500 20px/22px $main-font;
     }
   }
 }
 
-@media screen and (min-width: $md-min) and (max-width: $md-max) {
+@media all and (min-width: $sm-min) {
   .features {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
     border-radius: 50px 0;
-    border: 1px solid #c69;
-    background: rgba(204, 102, 153, 0.05);
+    border: 1px solid $secondary-color;
+    background: $features-background;
+    transition: box-shadow .3s ease-in-out;
 
     &__heading {
       flex: 1;
-      font : 900 58px/60px "Dynalight",Helvetica,sans-serif
-    }
-
-    &__description {
-      flex: 2;
-    }
-
-    &:nth-of-type(2n + 2) {
-      flex-direction: row-reverse;
-    }
-  }
-}
-
-@media screen and (min-width: $lg-min) {
-  .features {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    border-radius: 50px 0;
-    border: 1px solid #c69;
-    background: rgba(204, 102, 153, 0.05);
-    cursor: pointer;
-    transition: box-shadow .3s;
-
-    &__heading {
-      flex: 1;
-      font : 900 62px/60px "Dynalight",Helvetica,sans-serif
+      font: 900 58px/60px $secondary-font;
     }
 
     &__description {
@@ -70,7 +44,8 @@
     }
 
     &:hover {
-      box-shadow: 0 0 30px $main-color-dark;
+      box-shadow: 0 0 50px $main-color-dark;
+
     }
   }
 }

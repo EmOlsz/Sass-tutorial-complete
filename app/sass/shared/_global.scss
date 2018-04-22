@@ -3,10 +3,41 @@ html, body {
 }
 
 body {
-  background: $background-color;
+  background: $main-background;
   overflow-x: hidden;
 }
 
 .block {
-  margin: 50px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.footer-margin {
+  margin: 0 15px;
+}
+
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .container {
+    width: 945px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .container {
+    width: 1150px;
+  }
 }

@@ -1,24 +1,13 @@
-// Shared
-
-@import "../../node_modules/bootstrap-grid/dist/grid.min.css";
 @import "shared/variables";
-@import "shared/global";
-@import "shared/animations";
 @import "shared/lists";
 @import "shared/maps";
+@import "shared/functions";
+@import "shared/global";
 @import "shared/mixins";
-
-// Header
-
 @import "header/header";
-
-//Main content
-
+@import "shared/animations";
 @import "main-content/main-content";
 @import "main-content/introduction";
 @import "main-content/features";
 @import "main-content/pros-cons";
-
-// Footer
-
 @import "footer/footer";

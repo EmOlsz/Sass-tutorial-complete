@@ -1,49 +1,31 @@
 .footer {
-  background: rgba(20, 20, 20, 0.5);
-  box-shadow: 0 0 10px $main-color-dark;
+  box-shadow: 0 0 10px get-font($main-color-dark);
+  background: $background-footer;
 
   &__container {
-    margin: 0 15px;
+    margin: 0 10px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
   }
 
-  &__nav {
-    margin: 15px 0;
+  &__title {
+    @extend .footer-margin;
 
-    &-list {
+    &-heading {
       margin: 0;
-      padding: 0;
-    }
-
-    &-element {
-      display: inline-block;
-    }
-
-    &-link {
-      color: $main-color-dark;
-      font: 500 30px $secondary-font;
-      cursor: pointer;
-      transition: color .3s;
-      margin: 5px 20px 5px 0;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-        color: $secondary-color;
-        outline: none;
-      }
+      color: get-font($main-color-dark);
+      font: 500 30px/32px $secondary-font;
     }
   }
 
   &__credits {
-    margin: 15px 0;
+    @extend .footer-margin;
 
     &-heading {
       margin: 0;
-      color: $main-color-dark;
-      font: 500 30px $secondary-font;
+      color: get-font($main-color-dark);
+      font: 500 30px/32px $secondary-font;
     }
 
     &-list {
@@ -53,55 +35,25 @@
     }
 
     &-info {
-      color: $main-color-dark;
-      font: 500 16px $main-font;
+      color: get-font($main-color-dark);
+      font: 500 16px/20px $main-font;
     }
 
     &-link {
       color: $secondary-color;
-      font: 500 16px $main-font;
+      font: 500 16px/20px $main-font;
       text-decoration: none;
     }
   }
 }
 
-@media screen and (min-width: $sm-min) and (max-width: $sm-max) {
+@media all and (min-width: $sm-min) {
   .footer {
 
     &__container {
       margin: 0 40px;
       flex-direction: row;
       justify-content: space-between;
-    }
-  }
-}
-
-@media screen and (min-width: $md-min) and (max-width: $md-max) {
-  .footer {
-
-    &__container {
-      margin: 0 50px;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-}
-
-@media screen and (min-width: $lg-min) {
-  .footer {
-
-    &__container {
-      margin: 0 50px;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    &__logo {
-
-      &-item {
-        width: 64px;
-        vertical-align: middle;
-      }
     }
   }
 }
